@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>ilume Jardim</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Arapey&family=Dancing+Script&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Arapey', serif;
+  background: linear-gradient(135deg, #ffe6f0, #f3e6ff);
+  padding: 20px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,\
+<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'>\
+<path fill='%23d8a4f2' d='M12 21s-6-4.35-9-7.5C-1 8.5 3 3 7.5 6.5L12 10l4.5-3.5C21 3 25 8.5 21 13.5 18 16.65 12 21 12 21z'/>\
+</svg>");
+  background-size: 80px 80px;
+}
+
+.card, h1, .slogan {
+  position: relative;
+  z-index: 1;
+}
+
+  .card {<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>ilume Jardim</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Arapey&family=Dancing+Script&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Arapey', serif;
+  background: linear-gradient(135deg, #ffe6f0, #f3e6ff);
+  padding: 20px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,\
+<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'>\
+<path fill='%23d8a4f2' d='M12 21s-6-4.35-9-7.5C-1 8.5 3 3 7.5 6.5L12 10l4.5-3.5C21 3 25 8.5 21 13.5 18 16.65 12 21 12 21z'/>\
+</svg>");
+  background-size: 80px 80px;
+}
+
+.card, h1, .slogan {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+  color: #c59be2;
+  font-size: 46px;
+  margin-bottom: 2px;
+}
+
+.slogan {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #c59be2;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.flower {
+  background: rgba(255,255,255,0.75);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+}
+
+.titulo {
+  background: rgba(220, 200, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  color: #b57edc;
+  margin-bottom: 12px;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 6px;
+  border: none;
+  border-radius: 8px;
+  background: #e6ccff;
+  cursor: pointer;
+}
+
+.total {
+  font-size: 28px;
+  text-align: center;
+  color: #b57edc;
+}
+
+.frete {
+  text-align: center;
+  margin-top: 10px;
+  color: #9b6ccf;
+  font-size: 15px;
+}
+
+.enviar {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #ffb6c1, #d8b4f8);
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 16px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  padding: 9px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<h1>ilume Jardim</h1>
+<p class="slogan">flores que iluminam momentos!</p>
+
+<!-- FLORES -->
+<div class="card">
+<h2 class="titulo">Flores unitárias:</h2>
+<p class="info">selecione as flores e quantidades</p>
+
+<div class="grid">
+<div class="flower">Tulipa R$17<br><br><button onclick="alterar('tulipa',-1)">-</button><span id="qtd-tulipa">0</span><button onclick="alterar('tulipa',1)">+</button></div>
+<div class="flower">Rosa R$22<br><br><button onclick="alterar('rosa',-1)">-</button><span id="qtd-rosa">0</span><button onclick="alterar('rosa',1)">+</button></div>
+<div class="flower">Girassol R$25<br><br><button onclick="alterar('girassol',-1)">-</button><span id="qtd-girassol">0</span><button onclick="alterar('girassol',1)">+</button></div>
+<div class="flower">Lavanda R$18<br><br><button onclick="alterar('lavanda',-1)">-</button><span id="qtd-lavanda">0</span><button onclick="alterar('lavanda',1)">+</button></div>
+<div class="flower">Lírio R$20<br><br><button onclick="alterar('lirio',-1)">-</button><span id="qtd-lirio">0</span><button onclick="alterar('lirio',1)">+</button></div>
+</div>
+</div>
+
+<!-- BUQUÊS -->
+<div class="card">
+<h2 class="titulo">Buquês:</h2>
+<p class="info">selecione o buquê e quantidade</p>
+
+<div class="grid">
+<div class="flower">Buquê Rapunzel R$55<br><br><button onclick="alterar('rapunzel',-1)">-</button><span id="qtd-rapunzel">0</span><button onclick="alterar('rapunzel',1)">+</button></div>
+<div class="flower">Buquê de Lírios R$86<br><br><button onclick="alterar('liriosb',-1)">-</button><span id="qtd-liriosb">0</span><button onclick="alterar('liriosb',1)">+</button></div>
+<div class="flower">Buquê de Tulipas R$75<br><br><button onclick="alterar('tulipasb',-1)">-</button><span id="qtd-tulipasb">0</span><button onclick="alterar('tulipasb',1)">+</button></div>
+<div class="flower">Buquê de Girassóis R$75<br><br><button onclick="alterar('girassoisb',-1)">-</button><span id="qtd-girassoisb">0</span><button onclick="alterar('girassoisb',1)">+</button></div>
+<div class="flower">Buquê de Rosas R$85<br><br><button onclick="alterar('rosasb',-1)">-</button><span id="qtd-rosasb">0</span><button onclick="alterar('rosasb',1)">+</button></div>
+</div>
+</div>
+
+<!-- PERSONALIZADO -->
+<div class="card">
+<h2 class="titulo">Buquês personalizados:</h2>
+<p class="info">selecione as flores e quantidades</p>
+
+<div class="grid">
+<div class="flower">Tulipa R$16<br><br><button onclick="alterar('tulipap',-1)">-</button><span id="qtd-tulipap">0</span><button onclick="alterar('tulipap',1)">+</button></div>
+<div class="flower">Rosa R$21<br><br><button onclick="alterar('rosap',-1)">-</button><span id="qtd-rosap">0</span><button onclick="alterar('rosap',1)">+</button></div>
+<div class="flower">Girassol R$24<br><br><button onclick="alterar('girassolp',-1)">-</button><span id="qtd-girassolp">0</span><button onclick="alterar('girassolp',1)">+</button></div>
+<div class="flower">Lavanda R$17<br><br><button onclick="alterar('lavandap',-1)">-</button><span id="qtd-lavandap">0</span><button onclick="alterar('lavandap',1)">+</button></div>
+<div class="flower">Lírio R$19<br><br><button onclick="alterar('liriop',-1)">-</button><span id="qtd-liriop">0</span><button onclick="alterar('liriop',1)">+</button></div>
+</div>
+</div>
+
+<!-- EMBALAGEM -->
+<div class="card">
+<h2>Escolha sua embalagem:</h2>
+<label><input type="radio" name="embalagem" value="15" onchange="calcular()"> Branca e dourada (R$15)</label><br>
+<label><input type="radio" name="embalagem" value="20" onchange="calcular()"> Colorida (R$20)</label>
+</div>
+
+<!-- PAGAMENTO -->
+<div class="card">
+<h2>Forma de pagamento:</h2>
+<label><input type="radio" name="pagamento" value="Cartão"> Cartão</label><br>
+<label><input type="radio" name="pagamento" value="Pix"> Pix</label>
+</div>
+
+<!-- ENDEREÇO -->
+<div class="card">
+<h2>adicione informações para o envio:</h2>
+
+<input id="nome" placeholder="Nome completo">
+<input id="cep" placeholder="CEP">
+<input id="cidade" placeholder="Cidade">
+<input id="rua" placeholder="Rua">
+<input id="bairro" placeholder="Bairro">
+<input id="numero" placeholder="Número da casa">
+<textarea id="obs" placeholder="Observações"></textarea>
+
+</div>
+
+<!-- TOTAL -->
+<div class="card">
+<h2>Total:</h2>
+<p id="total" class="total">R$0</p>
+<p class="frete">o frete é calculado e adicionado pelo WhatsApp, junto com o pagamento final</p>
+</div>
+
+<!-- AVISO -->
+<div class="card">
+<p><strong>⚠️ Informações Importantes</strong></p>
+<p>As cores das flores devem ser escolhidas no WhatsApp.</p>
+
+<label>
+<input type="checkbox" id="concordo">
+Concordo com o prazo de 15 dias úteis para produção do buquê personalizado
+</label>
+</div>
+
+<button class="enviar" onclick="enviarWhats()">Enviar pedido no WhatsApp</button>
+
+<script>
+let precos = {
+tulipa:17, rosa:22, girassol:25, lavanda:18, lirio:20,
+rapunzel:55, liriosb:86, tulipasb:75, girassoisb:75, rosasb:85,
+tulipap:16, rosap:21, girassolp:24, lavandap:17, liriop:19
+};
+
+let nomes = {
+tulipa:"Tulipa", rosa:"Rosa", girassol:"Girassol", lavanda:"Lavanda", lirio:"Lírio",
+rapunzel:"Buquê Rapunzel", liriosb:"Buquê de Lírios", tulipasb:"Buquê de Tulipas",
+girassoisb:"Buquê de Girassóis", rosasb:"Buquê de Rosas",
+tulipap:"Tulipa (personalizado)", rosap:"Rosa (personalizado)",
+girassolp:"Girassol (personalizado)", lavandap:"Lavanda (personalizado)", liriop:"Lírio (personalizado)"
+};
+
+let quantidades = {};
+for(let i in precos){ quantidades[i]=0; }
+
+function alterar(tipo, valor){
+quantidades[tipo]+=valor;
+if(quantidades[tipo]<0) quantidades[tipo]=0;
+document.getElementById("qtd-"+tipo).innerText = quantidades[tipo];
+calcular();
+}
+
+function calcular(){
+let total=0;
+for(let t in quantidades){
+total += quantidades[t]*precos[t];
+}
+let emb = document.querySelector('input[name="embalagem"]:checked');
+if(emb) total += Number(emb.value);
+document.getElementById("total").innerText = "R$"+total;
+}
+
+function enviarWhats(){
+
+let emb = document.querySelector('input[name="embalagem"]:checked');
+let pag = document.querySelector('input[name="pagamento"]:checked');
+let ok = document.getElementById("concordo").checked;
+
+let nome = document.getElementById("nome").value.trim();
+let cep = document.getElementById("cep").value.trim();
+let cidade = document.getElementById("cidade").value.trim();
+let rua = document.getElementById("rua").value.trim();
+let bairro = document.getElementById("bairro").value.trim();
+let numero = document.getElementById("numero").value.trim();
+let obs = document.getElementById("obs").value.trim();
+
+// 🚫 BLOQUEIO TOTAL
+if(!nome || !cep || !cidade || !rua || !bairro || !numero){
+alert("Preencha todas as informações de envio antes de continuar 😊");
+return;
+}
+
+if(!emb){
+alert("Selecione a embalagem 😊");
+return;
+}
+
+if(!pag){
+alert("Selecione a forma de pagamento 😊");
+return;
+}
+
+if(!ok){
+alert("Você precisa concordar com as informações 😊");
+return;
+}
+
+let itens="";
+for(let t in quantidades){
+if(quantidades[t]>0){
+itens += `• ${quantidades[t]}x ${nomes[t]}%0A`;
+}
+}
+
+let total = document.getElementById("total").innerText;
+
+let msg = `Olá! Gostaria de fazer um pedido:%0A%0A${itens}%0ATotal: ${total}%0AForma de pagamento: ${pag.value}%0A%0A📍 Endereço:%0ANome: ${nome}%0ACEP: ${cep}%0ACidade: ${cidade}%0ARua: ${rua}%0ABairro: ${bairro}%0ANúmero: ${numero}%0AObservações: ${obs}`;
+
+window.open("https://wa.me/554299849842?text="+msg);
+}
+</script>
+
+</body>
+</html>
